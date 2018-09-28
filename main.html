@@ -19,13 +19,14 @@
         </video>
     </div>
     <!--Navigation-->
-        <div class="nav-button js-nav-button" on-touch="dropDown()">
+        <div class="nav-button" onclick="openNav()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+        <div id = "js-sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
             <a href="#">Home</a>
             <a href="#">Shop</a>
             <a href="#">Clients</a>
@@ -236,8 +237,18 @@
             
     </footer>
     <script>
-        document.getElementById("js-nav-button").onclick  = dropDown(){
-            
+        //detected user's screen width
+        let screenWidth = window.screen.availWidth;
+        console.log(screenWidth);
+        function openNav(){
+            if(screenWidth >= 1200)
+                document.getElementById("js-sidebar").style.width = "20vw";
+            else
+                document.getElementById("js-sidebar").style.width = "60vw";
+        }
+
+        function closeNav(){
+            document.getElementById("js-sidebar").style.width = 0;
         }
     </script>
 </body>

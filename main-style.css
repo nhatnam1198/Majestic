@@ -72,8 +72,8 @@ body{
     display: block;
     width: 40px;
     height: 40px;
-    top: 2px;
-    background-color: #646363;
+    top: 10px;
+    background-color: black;
     overflow: hidden;
     padding: 2px;
     border-radius: 3px;
@@ -81,27 +81,18 @@ body{
     z-index: 30;
 }
 
-.nav-button:hover{
-    background-color: white;
-}
-
 .nav-button span{
     width: 100%;
-    background-color: #111111;
-    height: 6px;
+    background-color: white;
+    height: 3px;
     display: block;
-    margin: 4px 0;
+    margin: 7px 0;
     border-radius: 3px;
-}
-
-.nav-button:hover .nav-content{
-    display: block;
-    border-radius: 0px 0px 5px 5px;
 }
 
 .sidebar {
     height: 100%;
-    width: 65vw;
+    width: 0;
     position: fixed;
     z-index: 200;
     top: 0;
@@ -113,7 +104,7 @@ body{
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 30px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -282,15 +273,7 @@ body{
 }
 
 @media only screen and (min-width: 1200px){
-    .nav-button{
-        width: 60px;
-        height: 60px;
-    }
     
-    .nav-button span{
-        height: 8px;
-        margin: 7px 0;
-    }
     
     .nav-content ul li {
         width: 200px;
@@ -327,6 +310,36 @@ body{
     }   
 }*/
 /*Bottom Social Media Icon */
+
+@media only screen and (min-width: 600px){
+    .sidebar a{
+        font-size: 50px;
+        padding: 20px 20px 20px 60px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .nav-button{
+        width: 50px;
+        height: 50px;
+        left: 15px;
+    }
+    
+    .nav-button span{
+        height: 4px;
+        margin: 8px 0;
+        
+    }
+
+    .nav-button:hover span{
+        margin: 9px 0;
+        transition: 0,5s;
+    }
+
+    .sidebar a{
+        font-size: 30px;
+    }
+}
 
 
 .icon-container{
